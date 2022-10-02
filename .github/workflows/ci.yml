@@ -25,4 +25,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run specs
-        run: bash bin/cibuild
+        run: wtf/cibuild
