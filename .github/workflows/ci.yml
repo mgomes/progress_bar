@@ -24,5 +24,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - run: ls
       - name: Run specs
         run: ./bin/cibuild
