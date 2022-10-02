@@ -23,6 +23,6 @@ jobs:
     container: crystallang/crystal:${{ matrix.crystal }}-alpine
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Run specs
         run: ./bin/cibuild
