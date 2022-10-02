@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Run all examples in the examples directory
 for file in examples/*.cr ; do
