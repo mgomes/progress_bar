@@ -1,6 +1,14 @@
-# progress_bar
+# Progress Bar Crystal Shard
 
-TODO: Write a description here
+A customizable progress bar for Crystal.
+
+* Themeable configuration
+* Integrates with `IO::MultiWriter` to display progress based on actual data
+* Fiber-safe
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/547245.svg)](https://asciinema.org/a/547245)
 
 ## Installation
 
@@ -20,20 +28,4 @@ TODO: Write a description here
 require "progress_bar"
 ```
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/progress_bar/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
-
-## Contributors
-
-- [Mauricio Gomes](https://github.com/your-github-user) - creator and maintainer
+See the `examples/` directory for example usage.
