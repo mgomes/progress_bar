@@ -2,8 +2,8 @@ require "../spec_helper"
 
 describe Progress::Theme do
   describe "defaults" do
-    default_theme = Progress::Theme.new
 
+    default_theme = Progress::Theme.new
     it "should set the defaults for all getters" do
       default_theme.complete.should eq("\u2593")
       default_theme.incomplete.should eq("\u2591")
@@ -11,7 +11,7 @@ describe Progress::Theme do
       default_theme.alt_progress_head.should eq(nil)
       default_theme.bar_start.should eq("[")
       default_theme.bar_end.should eq("]")
-      default_theme.width.should eq(100)
+      default_theme.width.should eq(60)
       default_theme.number_format.should eq("%.1f%%")
       default_theme.binary_prefix_format.should eq(Int::BinaryPrefixFormat::JEDEC)
       default_theme.decimal_separator.should eq(".")

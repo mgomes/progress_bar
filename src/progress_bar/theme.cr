@@ -13,7 +13,7 @@ module Progress
 
     def initialize(@complete = "\u2593", @alt_progress_head = nil,
                    @progress_head = nil, @incomplete = "\u2591",
-                   @bar_start = "[", @bar_end = "]", @width = 100,
+                   @bar_start = "[", @bar_end = "]", @width = 60,
                    @number_format = "%.1f%%", @binary_prefix_format = :JEDEC,
                    @decimal_separator = ".")
 
