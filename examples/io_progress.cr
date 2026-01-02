@@ -20,5 +20,5 @@ standard_io = IO::Memory.new
 writer = IO::MultiWriter.new(bar.progress_writer, standard_io)
 iterations.times do
   writer.puts(byte_string)
-  sleep(rand(0.0..interval))
+  sleep(rand(0.0..interval).seconds)
 end

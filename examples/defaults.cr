@@ -6,6 +6,6 @@ theme = Progress::Theme.new
 bar = Progress::Bar.new(theme: theme)
 
 100.times do |i|
-  bar.tick(1)
-  sleep(interval)
+ bar.tick(1)
+  sleep(interval.seconds)
 end
