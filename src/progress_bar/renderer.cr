@@ -29,7 +29,10 @@ module Progress
     end
 
     def percent_complete
-      @bar.current.to_f / (@bar.total.to_f / 100.to_f)
+      total = @bar.total.to_f
+      return 100.0 if total.zero?
+
+      (@bar.current.to_f / total) * 100
     end
 
     private def render_throughput
@@ -108,7 +111,10 @@ module Progress
     end
 
     private def position
-      ((@bar.current.to_f * @theme.width.to_f) / @bar.total).to_i
+      total = @bar.total.to_f
+      return @theme.width if total.zero?
+
+      ((@bar.current.to_f * @theme.width.to_f) / total).to_i
     end
   end
 end
