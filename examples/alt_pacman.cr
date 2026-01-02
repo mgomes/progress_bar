@@ -14,5 +14,5 @@ bar = Progress::Bar.new(theme: theme)
 
 100.times do |i|
   bar.tick(1)
-  sleep(interval)
+  sleep(interval.seconds)
 end

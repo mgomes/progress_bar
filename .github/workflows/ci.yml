@@ -10,7 +10,7 @@ jobs:
         experimental: [false]
         os: [ubuntu-latest]
         crystal:
-          - 1.8.1
+          - 1.18.2
         include:
           - experimental: true
             os: ubuntu-latest
