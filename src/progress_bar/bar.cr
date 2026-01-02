@@ -8,11 +8,10 @@ module Progress
     getter current, total, theme, output_stream
 
     def initialize(@total = 100, @step = 1, @theme = Theme.new,
-                   @output_stream = STDOUT)
+                   @output_stream = STDOUT, lock : Mutex = Mutex.new)
 
       @current = 0.0_f64
-      @current_tick = 0
-      @lock = Mutex.new
+      @lock = lock
       @renderer = Renderer.new(bar: self)
     end
 
@@ -20,7 +19,7 @@ module Progress
       @lock.synchronize do
         previous_value = @current
         @current += n
-        @current = @current.clamp(0.0_f64, @total)
+        @current = @current.clamp(0.0_f64, @total.to_f)
         unless @current == previous_value || no_print
           @renderer.not_nil!.print
         end
