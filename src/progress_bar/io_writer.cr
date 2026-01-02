@@ -9,8 +9,8 @@ module Progress
       @bar.tick(slice.bytesize)
     end
 
-    def read(slice : Bytes) : Nil
-
+    def read(slice : Bytes)
+      0
     end
   end
 end
